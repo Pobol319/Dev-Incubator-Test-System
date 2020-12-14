@@ -15,9 +15,11 @@
 <body class="myBody">
 
 <div>
-    <br> <a class="myLink" href="<c:url value="/admin/createTest"/>">Создать тест</a><br>
+    <br> <a class="myLink" href="<c:url value="/admin/createTopicAndTest"/>">Созадть топик и тест</a><br>
+    <br> <a class="myLink" href="<c:url value="/admin/createTest"/>">Наполнить тест</a><br>
     <br> <a class="myLink" href="<c:url value="/admin/createUser"/>">Создать пользователя</a><br>
     <br> <a class="myLink" href="<c:url value="/admin/showStatistic"/>">Статистика</a><br>
+    <br> <a class="myLink" href="<c:url value="/logout"/>">Выход</a><br>
 </div>
 
 </body>

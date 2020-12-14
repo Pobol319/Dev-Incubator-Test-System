@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TopicServiceImpl implements TopicService {
@@ -31,5 +32,18 @@ public class TopicServiceImpl implements TopicService {
         List<String> names = new ArrayList<>();
         topics.forEach(t -> names.add(t.getName()));
         return names;
+    }
+
+    @Override
+    public Optional<Topic> getByName(String name) {
+        return topicRepository.findByName(name);
+    }
+
+    @Override
+    public Topic save(String name, String description) {
+        Topic topic = new Topic();
+        topic.setName(name);
+        topic.setDescription(description);
+        return topicRepository.save(topic);
     }
 }

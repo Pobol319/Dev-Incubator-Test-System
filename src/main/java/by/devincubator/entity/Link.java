@@ -27,7 +27,7 @@ public class Link {
     }
 
     @OneToOne
-    @JoinColumn(name = "literatureId", insertable = false, updatable = false)
+    @JoinColumn(name = "literatureId", updatable = false)
     private Literature literature;
 
     @Override

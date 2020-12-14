@@ -19,7 +19,7 @@
     <form:form method="post" action="/admin/createUser" modelAttribute="user">
         <table class="createUser">
             <tr>
-                <td><form:select path="roleSet" items="${allRoles}" multiple="true" itemValue="roleId" itemLabel="role" cssClass="myRow role"/></td>
+                <td><form:checkboxes path="roleSet" items="${allRoles}" multiple="true" itemValue="roleId" itemLabel="role" cssClass="myRow role"/></td>
             </tr>
             <tr>
                 <td><form:input path="lastName" placeholder="Фамилия" required="true" cssClass="myRow"/></td>

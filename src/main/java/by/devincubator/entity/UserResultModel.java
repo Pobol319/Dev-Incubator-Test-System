@@ -1,6 +1,6 @@
 package by.devincubator.entity;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 public class UserResultModel {

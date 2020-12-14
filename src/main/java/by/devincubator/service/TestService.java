@@ -6,6 +6,7 @@ import by.devincubator.entity.Test;
 import java.util.List;
 import java.util.Set;
 
+import by.devincubator.entity.Topic;
 import by.devincubator.entity.view.TestStatistic;
 
 public interface TestService {
@@ -19,4 +20,6 @@ public interface TestService {
     Integer getHowManyTimesTestWasPassed(Integer id);
 
     List<TestStatistic> getTestStatisticList();
+
+    void save(String name, String description, Topic topic);
 }

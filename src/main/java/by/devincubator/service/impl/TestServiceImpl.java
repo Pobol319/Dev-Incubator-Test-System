@@ -2,6 +2,7 @@ package by.devincubator.service.impl;
 
 import by.devincubator.entity.Question;
 import by.devincubator.entity.Test;
+import by.devincubator.entity.Topic;
 import by.devincubator.repository.QuestionRepository;
 import by.devincubator.entity.view.TestStatistic;
 import by.devincubator.repository.TestRepository;
@@ -19,7 +20,6 @@ public class TestServiceImpl implements TestService {
 
     @Autowired
     TestRepository repository;
-
 
     @Override
     public Test findByTestId(int testId) {
@@ -57,5 +57,14 @@ public class TestServiceImpl implements TestService {
         )));
 
         return testStatisticList;
+    }
+
+    @Override
+    public void save(String name, String description, Topic topic) {
+        Test test = new Test();
+        test.setName(name);
+        test.setDescription(description);
+        test.setTopic(topic);
+        repository.save(test);
     }
 }

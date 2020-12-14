@@ -56,7 +56,7 @@ public class Test {
     private Set<Question> questionSet;
 
     @ManyToOne
-    @JoinColumn(name = "topicId", insertable = false, updatable = false)
+    @JoinColumn(name = "topicId", updatable = false)
     private Topic topic;
 
     @Override

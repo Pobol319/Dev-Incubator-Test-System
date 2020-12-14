@@ -46,7 +46,7 @@ public class Literature {
     private Link link;
 
     @ManyToOne
-    @JoinColumn(name = "questionId", insertable = false, updatable = false)
+    @JoinColumn(name = "questionId", updatable = false)
     private Question question;
 
     @Override
